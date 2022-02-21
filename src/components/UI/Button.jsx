@@ -4,7 +4,7 @@ import "./Button.css";
 
 function Button(props) {
   return (
-    <button class="button" type={props.buttom || "button"}>
+    <button className="button" type={props.type || "button"}>
       {props.children}
     </button>
   );
