@@ -1,4 +1,7 @@
 import React from "react";
+import Card from "../UI/Card";
+
+import "./AddUser.css";
 
 function AddUser(props) {
   const addUserHandler = (event) => {
@@ -7,7 +10,7 @@ function AddUser(props) {
 
   return (
     <Card>
-      <form onSubmit={addUserHandler}>
+      <form className="input" onSubmit={addUserHandler}>
         <label htmlFor="username">Username</label>
         <input type="text" id="username" />
         <label name="age">Age (Years)</label>
