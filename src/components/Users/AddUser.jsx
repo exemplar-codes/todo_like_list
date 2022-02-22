@@ -8,6 +8,9 @@ function AddUser(props) {
   const addUserHandler = (event) => {
     event.preventDefault(); // stop the request
 
+    if (enteredUsername.length === 0 || enteredAge.length === 0)
+      return; // don't do anything if blank
+
     // resetting if submittted
     setEnteredUserName("");
     setEnteredAge("");
