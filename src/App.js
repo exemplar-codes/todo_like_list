@@ -17,7 +17,7 @@ function App() {
       {
         name: enteredUsername,
         age: enteredAge,
-        id: Math.floor(Math.random()),
+        id: (prevEntries.at(-1) && 0) + 1,
       },
     ]);
   };
