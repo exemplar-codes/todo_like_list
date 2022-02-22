@@ -7,7 +7,13 @@ function Display(props) {
   return (
     <div className="display">
       {props.entries.map((entry) => (
-        <Entry key={entry.id} name={entry.name} age={entry.age} />
+        <Entry
+          onRemoveEntryDataHandler={props.removeEntryDataHandler}
+          key={entry.id}
+          id={entry.id}
+          name={entry.name}
+          age={entry.age}
+        />
       ))}
     </div>
   );

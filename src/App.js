@@ -21,10 +21,20 @@ function App() {
       },
     ]);
   };
+
+  const removeEntryDataHandler = (id) => {
+    setAddedEntries((prevEntries) =>
+      prevEntries.filter((entry) => entry.id !== id)
+    );
+  };
+
   return (
     <div>
       <AddUser addEntryDataHandler={addEntryDataHandler} />
-      <Display entries={addedEntries} />
+      <Display
+        entries={addedEntries}
+        removeEntryDataHandler={removeEntryDataHandler}
+      />
     </div>
   );
 }
