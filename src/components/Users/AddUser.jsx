@@ -12,7 +12,7 @@ function AddUser(props) {
 
     props.addEntryDataHandler(enteredUsername, enteredAge);
 
-    // resetting if submittted
+    // reset on submission
     setEnteredUserName("");
     setEnteredAge("");
   };
