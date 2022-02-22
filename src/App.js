@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Display from "./components/Display/Display";
 import AddUser from "./components/Users/AddUser";
@@ -8,10 +9,22 @@ let entries = [
 ];
 
 function App() {
+  const [addedEntries, setAddedEntries] = useState(entries);
+
+  const addEntryDataHandler = (enteredUsername, enteredAge) => {
+    setAddedEntries((prevEntries) => [
+      ...prevEntries,
+      {
+        name: enteredUsername,
+        age: enteredAge,
+        id: Math.floor(Math.random()),
+      },
+    ]);
+  };
   return (
     <div>
-      <AddUser />
-      <Display entries={entries} />
+      <AddUser addEntryDataHandler={addEntryDataHandler} />
+      <Display entries={addedEntries} />
     </div>
   );
 }
