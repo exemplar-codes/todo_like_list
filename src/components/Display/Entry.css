@@ -4,6 +4,8 @@
   margin: 0.3em;
   width: 20vw;
   text-align: left;
+
+  cursor: grab;
 }
 
 .name {
