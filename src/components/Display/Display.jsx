@@ -1,10 +1,12 @@
 import React from "react";
-import Card from "../UI/Card";
 
 import "./Display.css";
 import Entry from "./Entry";
 
-let entries = [{ name: "Sanjar", age: 24, id: 2 }];
+let entries = [
+  { name: "Sanjar", age: 24, id: 1 },
+  { name: "Ahmar", age: 19, id: 2 },
+];
 
 function Display() {
   return (

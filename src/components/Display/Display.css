@@ -1,4 +1,5 @@
 .display {
-  text-align: left;
-  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

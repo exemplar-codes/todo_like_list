@@ -6,7 +6,8 @@ import "./Entry.css";
 function Entry(props) {
   return (
     <Card className="entry">
-      {props.name} {props.age}
+      <span className="name">{props.name}</span>{" "}
+      <span className="age">{props.age}</span>
     </Card>
   );
 }
