@@ -17,7 +17,7 @@ function App() {
       {
         name: enteredUsername,
         age: enteredAge,
-        id: (prevEntries.at(-1) && 0) + 1,
+        id: prevEntries.length + 1,
       },
     ]);
   };
