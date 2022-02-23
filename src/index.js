@@ -1,13 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import AgeModal from "./components/Modals/AgeModal";
-import BlankParamModal from "./components/Modals/BlankParamModal";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <AgeModal/>
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );
