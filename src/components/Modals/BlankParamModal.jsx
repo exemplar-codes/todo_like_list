@@ -1,20 +1,21 @@
 import React from "react";
-import Card from "../UI/Card";
+import ModalWrapper from "./ModalWrapper";
+
 
 function BlankParamModal(props) {
   return (
-    <div>
+    <ModalWrapper>
       {props.words.map((word, index) => (
-        <Card key={word}>
+        <div key={word}>
           <span className="red">{word}</span> is blank
           {props.words.length > 1
             ? index !== props.words.length - 1
               ? ", "
               : ""
             : ""}
-        </Card>
+        </div>
       ))}
-    </div>
+    </ModalWrapper>
   );
 }
 

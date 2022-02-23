@@ -1,0 +1,31 @@
+.modal-wrapper {
+  padding: 1em;
+  background-color: white;
+  border: 5px solid #741188;
+
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.modal-container {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-ok {
+  background-color: white;
+  border: none;
+  border-radius: 1px;
+
+  cursor: pointer;
+}
+
+.modal-ok:active {
+  background-color: gray;
+  cursor: default;
+}

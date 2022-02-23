@@ -1,11 +1,13 @@
 import React from "react";
-import Card from "../UI/Card";
+import ModalWrapper from "./ModalWrapper";
 
 function AgeModal(props) {
   return (
-    <div>
-      <span className="red">Age</span> should be &gt;= 1
-    </div>
+    <ModalWrapper>
+      <div>
+        <span className="red">Age</span> should be &gt;= 1
+      </div>
+    </ModalWrapper>
   );
 }
 
