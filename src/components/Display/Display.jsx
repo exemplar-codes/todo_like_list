@@ -6,17 +6,18 @@ import Entry from "./Entry";
 
 function Display(props) {
   return (
-    <div className="display">
+    <ul className="display">
       {props.entries.map((entry) => (
-        <Entry
-          onRemoveEntryDataHandler={props.removeEntryDataHandler}
-          key={entry.id}
-          id={entry.id}
-          name={entry.name}
-          age={entry.age}
-        />
+        <li key={entry.id}>
+          <Entry
+            onRemoveEntryDataHandler={props.removeEntryDataHandler}
+            id={entry.id}
+            name={entry.name}
+            age={entry.age}
+          />
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
 
