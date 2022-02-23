@@ -10,16 +10,22 @@ function AddUser(props) {
   const addUserHandler = (event) => {
     event.preventDefault(); // stop the request
 
-    if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0) {
-      props.showModalHandler("blank name and age");
-      return; // don't do anything if blank
+    if (enteredUsername.trim().length === 0) {
+      if (enteredAge.trim().length === 0) {
+        props.showModalHandler("blank name and age");
+      } else if (enteredAge.trim().length !== 0)
+        props.showModalHandler("blank name");
+    } else if (enteredAge.trim().length === 0) {
+      props.showModalHandler("blank age");
+    } else if (Number(enteredAge.trim()) < 1) {
+      props.showModalHandler("age < 1");
+    } else {
+      props.addEntryDataHandler(enteredUsername.trim(), enteredAge.trim());
+
+      // reset on submission
+      setEnteredUserName("");
+      setEnteredAge("");
     }
-
-    props.addEntryDataHandler(enteredUsername.trim(), enteredAge.trim());
-
-    // reset on submission
-    setEnteredUserName("");
-    setEnteredAge("");
   };
 
   const [enteredUsername, setEnteredUserName] = useState("");

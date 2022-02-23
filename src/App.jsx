@@ -47,7 +47,7 @@ function App() {
       />
     </div>
   ) : (
-    <ControllerModal modalType={showModal[1]} />
+      <ControllerModal whichModal={showModal[1]} />
   );
 }
 

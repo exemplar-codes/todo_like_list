@@ -1,4 +1,7 @@
 import React from "react";
+
+import PropTypes from "prop-types";
+
 import AgeModal from "./AgeModal";
 import BlankParamModal from "./BlankParamModal";
 
@@ -18,3 +21,7 @@ function ControllerModal(props) {
 }
 
 export default ControllerModal;
+
+ControllerModal.propTypes = {
+  whichModal: PropTypes.func.isRequired,
+};
