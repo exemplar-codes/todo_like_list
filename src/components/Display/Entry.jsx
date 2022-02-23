@@ -13,6 +13,7 @@ function Entry(props) {
       onClick={() => {
         props.onRemoveEntryDataHandler(props.id);
       }}
+      className="entry-border"
     >
       <Card className="entry">
         <span className="name">{props.name}</span> (
