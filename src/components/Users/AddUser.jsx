@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
+
 import Button from "../UI/Button";
 import Card from "../UI/Card";
 
@@ -51,3 +53,7 @@ function AddUser(props) {
 }
 
 export default AddUser;
+
+AddUser.propTypes = {
+  addUserHandler: PropTypes.func.isRequired,
+};

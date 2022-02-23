@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import "./Display.css";
 import Entry from "./Entry";
@@ -20,3 +21,12 @@ function Display(props) {
 }
 
 export default Display;
+
+Display.propTypes = {
+  entries: PropTypes.shape({
+    name: PropTypes.string,
+    age: PropTypes.number,
+    id: PropTypes.number,
+  }).isRequired,
+  removeEntryDataHandler: PropTypes.func.isRequired,
+};
