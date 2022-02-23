@@ -10,8 +10,10 @@ function AddUser(props) {
   const addUserHandler = (event) => {
     event.preventDefault(); // stop the request
 
-    if (enteredUsername.trim().length === 0 || Number(enteredAge.trim()) < 1)
+    if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0) {
+      props.showModalHandler("blank name and age");
       return; // don't do anything if blank
+    }
 
     props.addEntryDataHandler(enteredUsername.trim(), enteredAge.trim());
 
@@ -57,4 +59,5 @@ export default AddUser;
 
 AddUser.propTypes = {
   addEntryDataHandler: PropTypes.func.isRequired,
+  showModalHandler: PropTypes.func.isRequired,
 };

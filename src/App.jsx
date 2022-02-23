@@ -12,10 +12,10 @@ let entries = [
 function App() {
   const [addedEntries, setAddedEntries] = useState(entries);
 
-  const [showModal, setModal] = useState(false); // have multiple modals from here
+  const [showModal, setModal] = useState([false, ""]); // have multiple modals from here
 
-  const showModalHandler = () => {
-    setModal(!showModal);
+  const showModalHandler = (modalType) => {
+    setModal((prevShowModal) => [!prevShowModal[0], modalType]);
   };
 
   const addEntryDataHandler = (enteredUsername, enteredAge) => {
@@ -35,11 +35,11 @@ function App() {
     );
   };
 
-  return !showModal ? (
+  return !showModal[0] ? (
     <div>
       <AddUser
         addEntryDataHandler={addEntryDataHandler}
-        forShowModal={showModalHandler}
+        showModalHandler={showModalHandler}
       />
       <Display
         entries={addedEntries}
@@ -47,7 +47,7 @@ function App() {
       />
     </div>
   ) : (
-    <ControllerModal />
+    <ControllerModal modalType={showModal[1]} />
   );
 }
 
