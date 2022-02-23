@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Display from "./components/Display/Display";
-import BlankParam from "./components/Modals/BlankParamModal";
+import ControllerModal from "./components/Modals/ControllerModal";
 import AddUser from "./components/Users/AddUser";
 
 let entries = [
@@ -47,7 +47,7 @@ function App() {
       />
     </div>
   ) : (
-    <BlankParam />
+    <ControllerModal />
   );
 }
 

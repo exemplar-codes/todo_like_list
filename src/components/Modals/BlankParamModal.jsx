@@ -1,6 +1,8 @@
 import React from "react";
-import ModalWrapper from "./ModalWrapper";
 
+import PropTypes from "prop-types";
+
+import ModalWrapper from "./ModalWrapper";
 
 function BlankParamModal(props) {
   return (
@@ -20,3 +22,7 @@ function BlankParamModal(props) {
 }
 
 export default BlankParamModal;
+
+BlankParamModal.propTypes = {
+  words: PropTypes.array.isRequired,
+};
