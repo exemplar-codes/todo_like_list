@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Display from "./components/Display/Display";
+import BlankParam from "./components/Modals/BlankParamModal";
 import AddUser from "./components/Users/AddUser";
 
 let entries = [
@@ -10,6 +11,12 @@ let entries = [
 
 function App() {
   const [addedEntries, setAddedEntries] = useState(entries);
+
+  const [showModal, setShowModal] = useState(false); // have multiple modals from here
+
+  const showModalHandler = () => {
+    setShowModal(!showModal);
+  };
 
   const addEntryDataHandler = (enteredUsername, enteredAge) => {
     setAddedEntries((prevEntries) => [
@@ -28,14 +35,19 @@ function App() {
     );
   };
 
-  return (
+  return showModal ? (
     <div>
-      <AddUser addEntryDataHandler={addEntryDataHandler} />
+      <AddUser
+        addEntryDataHandler={addEntryDataHandler}
+        forShowModal={showModalHandler}
+      />
       <Display
         entries={addedEntries}
         removeEntryDataHandler={removeEntryDataHandler}
       />
     </div>
+  ) : (
+    <BlankParam />
   );
 }
 
