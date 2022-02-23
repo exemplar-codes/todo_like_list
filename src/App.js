@@ -35,7 +35,7 @@ function App() {
     );
   };
 
-  return showModal ? (
+  return !showModal ? (
     <div>
       <AddUser
         addEntryDataHandler={addEntryDataHandler}
