@@ -12,10 +12,10 @@ let entries = [
 function App() {
   const [addedEntries, setAddedEntries] = useState(entries);
 
-  const [showModal, setShowModal] = useState(false); // have multiple modals from here
+  const [showModal, setModal] = useState(false); // have multiple modals from here
 
   const showModalHandler = () => {
-    setShowModal(!showModal);
+    setModal(!showModal);
   };
 
   const addEntryDataHandler = (enteredUsername, enteredAge) => {
