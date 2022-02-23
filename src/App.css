@@ -5,3 +5,7 @@ html {
 label {
   font-weight: bold;
 }
+
+.red {
+  color: red;
+}

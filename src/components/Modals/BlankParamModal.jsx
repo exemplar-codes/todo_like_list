@@ -6,7 +6,7 @@ function BlankParamModal(props) {
     <div>
       {props.words.map((word, index) => (
         <Card key={word}>
-          {word} is blank
+          <span className="red">{word}</span> is blank
           {props.words.length > 1
             ? index !== props.words.length - 1
               ? ", "

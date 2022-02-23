@@ -7,7 +7,7 @@ import BlankParamModal from "./components/Modals/BlankParamModal";
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    <BlankParamModal words={["name", "age"]} />
+    <BlankParamModal words={["Name", "Age"]} />
   </React.StrictMode>,
   document.getElementById("root")
 );
