@@ -24,10 +24,12 @@ function Display(props) {
 export default Display;
 
 Display.propTypes = {
-  entries: PropTypes.shape({
-    name: PropTypes.string,
-    age: PropTypes.number,
-    id: PropTypes.number,
-  }).isRequired,
+  entries: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      age: PropTypes.number,
+      id: PropTypes.number,
+    })
+  ).isRequired,
   removeEntryDataHandler: PropTypes.func.isRequired,
 };

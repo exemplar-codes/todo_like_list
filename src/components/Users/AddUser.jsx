@@ -56,5 +56,5 @@ function AddUser(props) {
 export default AddUser;
 
 AddUser.propTypes = {
-  addUserHandler: PropTypes.func.isRequired,
+  addEntryDataHandler: PropTypes.func.isRequired,
 };
