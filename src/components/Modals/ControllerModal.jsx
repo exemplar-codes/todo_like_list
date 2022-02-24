@@ -8,13 +8,15 @@ import BlankParamModal from "./BlankParamModal";
 function ControllerModal(props) {
   switch (props.whichModal) {
     case "blank age":
-      return <BlankParamModal words={["age"]} />;
+      return <BlankParamModal words={["age"]} removeModal={props.removeModal} />;
     case "blank name":
-      return <BlankParamModal words={["name"]} />;
+      return <BlankParamModal words={["name"]} removeModal={props.removeModal} />;
     case "blank name and age":
-      return <BlankParamModal words={["name", "age"]} />;
+      return (
+        <BlankParamModal words={["name", "age"]} removeModal={props.removeModal} />
+      );
     case "age < 1":
-      return <AgeModal />;
+      return <AgeModal removeModal={props.removeModal} />;
     default:
       return <div></div>;
   }

@@ -18,6 +18,10 @@ function App() {
     setModal((prevShowModal) => [!prevShowModal[0], modalType]);
   };
 
+  const removeModal = () => {
+    setModal([false, ""]);
+  };
+
   const addEntryDataHandler = (enteredUsername, enteredAge) => {
     setAddedEntries((prevEntries) => [
       ...prevEntries,
@@ -47,7 +51,7 @@ function App() {
       />
     </div>
   ) : (
-      <ControllerModal whichModal={showModal[1]} />
+    <ControllerModal whichModal={showModal[1]} removeModal={removeModal} />
   );
 }
 

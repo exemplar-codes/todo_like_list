@@ -6,7 +6,7 @@ function ModalWrapper(props) {
   return (
     <div className="modal-container">
           <div class="modal-wrapper">{props.children}</div>
-          <button className="modal-ok">Okay</button>
+          <button className="modal-ok" onClick={props.removeModal}>Okay</button>
     </div>
   );
 }

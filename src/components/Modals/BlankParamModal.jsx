@@ -6,7 +6,7 @@ import ModalWrapper from "./ModalWrapper";
 
 function BlankParamModal(props) {
   return (
-    <ModalWrapper>
+    <ModalWrapper removeModal={props.removeModal}>
       {props.words.map((word, index) => (
         <div key={word}>
           <span className="red">{word}</span> is blank

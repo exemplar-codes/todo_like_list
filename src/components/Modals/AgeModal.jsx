@@ -3,7 +3,7 @@ import ModalWrapper from "./ModalWrapper";
 
 function AgeModal(props) {
   return (
-    <ModalWrapper>
+    <ModalWrapper removeModal={props.removeModal}>
       <div>
         <span className="red">Age</span> should be &gt;= 1
       </div>
