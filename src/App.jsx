@@ -39,8 +39,11 @@ function App() {
     );
   };
 
-  return !showModal[0] ? (
+  return (
     <div>
+      {showModal[0] && (
+        <ControllerModal whichModal={showModal[1]} removeModal={removeModal} />
+      )}
       <AddUser
         addEntryDataHandler={addEntryDataHandler}
         showModalHandler={showModalHandler}
@@ -50,8 +53,6 @@ function App() {
         removeEntryDataHandler={removeEntryDataHandler}
       />
     </div>
-  ) : (
-    <ControllerModal whichModal={showModal[1]} removeModal={removeModal} />
   );
 }
 
