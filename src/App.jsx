@@ -40,7 +40,7 @@ function App() {
   };
 
   return (
-    <div>
+    <>
       {showModal[0] && (
         <ControllerModal whichModal={showModal[1]} removeModal={removeModal} />
       )}
@@ -52,7 +52,7 @@ function App() {
         entries={addedEntries}
         removeEntryDataHandler={removeEntryDataHandler}
       />
-    </div>
+    </>
   );
 }
 
