@@ -6,8 +6,8 @@ import "./ModalWrapper.css";
 function ModalWrapper(props) {
   return (
     <div className="modal-container">
-          <div class="modal-wrapper">{props.children}</div>
-          <Button onClick={props.removeModal}>Okay</Button>
+      <div className="modal-wrapper">{props.children}</div>
+      <Button onClick={props.removeModal}>Okay</Button>
     </div>
   );
 }

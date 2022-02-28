@@ -25,5 +25,5 @@ function ControllerModal(props) {
 export default ControllerModal;
 
 ControllerModal.propTypes = {
-  whichModal: PropTypes.func.isRequired,
+  whichModal: PropTypes.string.isRequired,
 };
