@@ -20,7 +20,10 @@ function AddUser(props) {
     } else if (Number(enteredAge.trim()) < 1) {
       props.showModalHandler("age < 1");
     } else {
-      props.addEntryDataHandler(enteredUsername.trim(), enteredAge.trim());
+      props.addEntryDataHandler(
+        enteredUsername.trim(),
+        Number(enteredAge.trim())
+      );
 
       // reset on submission
       setEnteredUserName("");
